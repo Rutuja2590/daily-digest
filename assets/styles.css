@@ -1,0 +1,437 @@
+:root {
+    --bg-deep: #2B0F0F;
+    --bg-card: #3B1818;
+    --bg-card-hover: #4A2020;
+    --accent-cream: #F5E6D3;
+    --text-primary: #FFF8EE;
+    --text-secondary: #C4A882;
+    --text-muted: #8B7355;
+    --positive: #5CB85C;
+    --negative: #E74C3C;
+    --divider: rgba(245, 230, 211, 0.1);
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.45);
+    --radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-deep);
+    color: var(--text-primary);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+}
+
+/* ── Header ────────────────────────────────── */
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--divider);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.header-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.header-date {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+}
+
+.header-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--accent-cream);
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+.header-greeting {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+/* ── Market Strip ──────────────────────────── */
+
+.market-strip {
+    margin-bottom: 3rem;
+}
+
+.market-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.market-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.market-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.market-name {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.market-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--accent-cream);
+}
+
+.market-change {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.market-change.positive {
+    color: var(--positive);
+}
+
+.market-change.negative {
+    color: var(--negative);
+}
+
+/* ── Editorial Sections ────────────────────── */
+
+.editorial-section {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 2rem 2.25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.editorial-section:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.section-icon {
+    font-size: 1.3rem;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent-cream);
+    letter-spacing: -0.01em;
+}
+
+.section-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.summary-text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    font-weight: 300;
+}
+
+.headlines-list {
+    border-top: 1px solid var(--divider);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.headlines-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.headline-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    text-decoration: none;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--divider);
+    transition: background 0.15s ease;
+}
+
+.headline-link:last-child {
+    border-bottom: none;
+}
+
+.headline-link:hover {
+    background: rgba(245, 230, 211, 0.03);
+}
+
+.headline-title {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.headline-link:hover .headline-title {
+    color: var(--accent-cream);
+}
+
+.headline-source {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* ── Divider ───────────────────────────────── */
+
+.section-divider {
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--accent-cream),
+        transparent
+    );
+    opacity: 0.15;
+    margin: 2rem 0;
+}
+
+/* ── Italian Lesson ────────────────────────── */
+
+.italian-section {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 2rem 2.25rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(245, 230, 211, 0.06);
+}
+
+.theme-badge {
+    margin-left: auto;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    background: rgba(245, 230, 211, 0.06);
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+}
+
+.italian-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.phrase-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+.phrase-card {
+    background: rgba(245, 230, 211, 0.03);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 0.5rem;
+    align-items: center;
+    transition: background 0.15s ease;
+}
+
+.phrase-card:hover {
+    background: rgba(245, 230, 211, 0.06);
+}
+
+.phrase-italian {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--accent-cream);
+    font-weight: 400;
+}
+
+.phrase-english {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+}
+
+.phrase-pronunciation {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: right;
+}
+
+.lesson-note {
+    background: rgba(245, 230, 211, 0.03);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+}
+
+.note-label {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+}
+
+.lesson-note p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ── Footer ────────────────────────────────── */
+
+.footer {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--divider);
+}
+
+.footer p {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* ── Animations ────────────────────────────── */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Responsive ────────────────────────────── */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem 1.25rem 3rem;
+    }
+
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .market-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .editorial-section {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .phrase-card {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+
+    .phrase-pronunciation {
+        text-align: left;
+    }
+
+    .headline-link {
+        flex-direction: column;
+        gap: 0.15rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-top {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .header-title {
+        font-size: 1.6rem;
+    }
+
+    .market-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+}
